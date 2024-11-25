@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Body Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .header .info {
+      flex: 1;
+    }
+
+    .header .info h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .header .info p {
+      margin: 5px 0;
+      color: #777;
+    }
+
+    /* Search Bar */
+    .search {
+      margin: 20px 0;
+      display: flex;
+    }
+
+    .search input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      color: #777;
+    }
+
+    .product-card button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-card button:hover {
+      background-color: #218838;
+    }
+
+    /* Navigation Menu */
+    .nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nav a .icon {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .nav a:hover {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <img src="https://pomf2.lain.la/f/tjx1e6c7.jpg" alt="Store Logo">
+      <div class="info">
+        <h1>Zero-Hosting</h1>
+        <p>DIGITAL MARKET</p>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search">
+      <input id="search-bar" type="text" placeholder="Cari Produk di Zero-Hosting" oninput="filterProducts()">
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products" id="product-grid">
+      <div class="product-card">
+        <img src="https://pomf2.lain.la/f/5di4oxa2.jpg" alt="VPS Product">
+        <h3>VPS Digital Ocean R1 C1</h3>
+        <p>Rp15.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Vps+R1+C1">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/5di4oxa2.jpg" alt="VPS Product">
+        <h3>VPS Digital Ocean R2 C2</h3>
+        <p>Rp20.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Vps+R2+C2">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <img src="https://pomf2.lain.la/f/5di4oxa2.jpg" alt="VPS Product">
+        <h3>VPS Digital Ocean R4 C2</h3>
+        <p>Rp35.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Vps+R4+C2'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/5di4oxa2.jpg" alt="VPS Product">
+        <h3>VPS Digital Ocean R8 C2</h3>
+        <p>Rp40.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Vps+R8+C2'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/5di4oxa2.jpg" alt="VPS Product">
+        <h3>VPS Digital Ocean R8 C4</h3>
+        <p>Rp50.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Vps+R8+C4'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/5di4oxa2.jpg" alt="VPS Product">
+        <h3>VPS Digital Ocean R16 C4</h3>
+        <p>Rp65.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Vps+R16+C4'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/sni8rsa.png" alt="Panel Product">
+        <h3>OWNER PANEL </h3>
+        <p>Rp30.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Owner+Panel">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <img src="https://pomf2.lain.la/f/sni8rsa.png" alt="Panel Product">
+        <h3>PT PANEL</h3>
+        <p>Rp20.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+PT+Panel'">
+        <button type="submit">BELI</button>
+        </form>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/sni8rsa.png" alt="Panel Product">
+        <h3>ADMIN PANEL</h3>
+        <p>Rp15.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Admin+Panel'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/sni8rsa.png" alt="Panel Product">
+        <h3>RESELLER PANEL PRIVATE</h3>
+        <p>Rp10.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Reseller+Panel+Private'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/sni8rsa.png" alt="Panel Product">
+        <h3>RESELLER PANEL PUBLIC</h3>
+        <p>Rp5.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Reseller+Panel+Public'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+            <div class="product-card">
+        <img src="https://pomf2.lain.la/f/sni8rsa.png" alt="Panel Product">
+        <h3>RESELLER SUBDOMAIN</h3>
+        <p>Rp10.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+Reseller+Subdomain'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <h3>SCRIPT KIWAMI ALPHA V1.0</h3>
+        <p>Rp15.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+SC+KIWAMI+ALPHA+V1.0'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <h3>SCRIPT KIWAMI V1.0</h3>
+        <p>Rp35.000</p>
+        <form action="https://wa.me/6281997715124?text=Bang+Beli+SC+KIWAMI+V1.0'">
+        <button type="submit">BELI</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
